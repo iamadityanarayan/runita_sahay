@@ -1,0 +1,23 @@
+.App {
+  min-height: 100vh;
+  overflow: clip;
+  background: var(--white-2);
+  color: var(--dark-charcoal-2);
+}
+
+.App main {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+}
+
+section[id] {
+  scroll-margin-top: 1.5rem;
+}
+
+::selection {
+  background: var(--dusty-blue-2);
+  color: var(--dark-charcoal-2);
+}

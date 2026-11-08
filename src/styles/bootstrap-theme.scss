@@ -1,0 +1,118 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+$warm-ochre-gold: #c58536;
+$warm-taupe: #a38375;
+$deep-forest-green: #143f35;
+$olive-sage: #8b9b90;
+$warm-off-white-cream: #f4f1ea;
+$light-soft-beige: #f9f8f6;
+$espresso-charcoal: #2b2523;
+$pure-white: #ffffff;
+$coral-2: #e8634b;
+$coral-2-alt: #ee6c4d;
+$dark-blue-2: #426388;
+$dark-blue-2-alt: #3d5a80;
+$dusty-blue-2: #99b3ce;
+$dusty-blue-2-alt: #98c1d9;
+$cream-2: #fbf9f7;
+$sand-2: #e2d5c3;
+$dark-charcoal-2: #293241;
+$dark-charcoal-2-alt: #1e293b;
+$white-2: #ffffff;
+
+$brand-colors: (
+  "warm-ochre-gold": $warm-ochre-gold,
+  "warm-taupe": $warm-taupe,
+  "deep-forest-green": $deep-forest-green,
+  "olive-sage": $olive-sage,
+  "warm-off-white-cream": $warm-off-white-cream,
+  "light-soft-beige": $light-soft-beige,
+  "espresso-charcoal": $espresso-charcoal,
+  "pure-white": $pure-white,
+  "coral-2": $coral-2,
+  "coral-2-alt": $coral-2-alt,
+  "dark-blue-2": $dark-blue-2,
+  "dark-blue-2-alt": $dark-blue-2-alt,
+  "dusty-blue-2": $dusty-blue-2,
+  "dusty-blue-2-alt": $dusty-blue-2-alt,
+  "cream-2": $cream-2,
+  "sand-2": $sand-2,
+  "dark-charcoal-2": $dark-charcoal-2,
+  "dark-charcoal-2-alt": $dark-charcoal-2-alt,
+  "white-2": $white-2,
+);
+
+$theme-colors: map-merge(
+  $theme-colors,
+  (
+    "primary": $coral-2,
+    "secondary": $warm-taupe,
+    "success": $deep-forest-green,
+    "info": $olive-sage,
+    "light": $warm-off-white-cream,
+    "dark": $espresso-charcoal,
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "color": map-merge(
+      map-get($utilities, "color"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "color"), "values"),
+          $brand-colors
+        ),
+      )
+    ),
+    "background-color": map-merge(
+      map-get($utilities, "background-color"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "background-color"), "values"),
+          $brand-colors
+        ),
+      )
+    ),
+    "border-color": map-merge(
+      map-get($utilities, "border-color"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "border-color"), "values"),
+          $brand-colors
+        ),
+      )
+    )
+  )
+);
+
+@import "bootstrap/scss/bootstrap";
+
+:root {
+  --warm-ochre-gold: #{$warm-ochre-gold};
+  --warm-taupe: #{$warm-taupe};
+  --deep-forest-green: #{$deep-forest-green};
+  --olive-sage: #{$olive-sage};
+  --warm-off-white-cream: #{$warm-off-white-cream};
+  --light-soft-beige: #{$light-soft-beige};
+  --espresso-charcoal: #{$espresso-charcoal};
+  --pure-white: #{$pure-white};
+  --pure-white-rgb: 255, 255, 255;
+  --coral-2: #{$coral-2};
+  --coral-2-alt: #{$coral-2-alt};
+  --dark-blue-2: #{$dark-blue-2};
+  --dark-blue-2-alt: #{$dark-blue-2-alt};
+  --dusty-blue-2: #{$dusty-blue-2};
+  --dusty-blue-2-alt: #{$dusty-blue-2-alt};
+  --cream-2: #{$cream-2};
+  --sand-2: #{$sand-2};
+  --dark-charcoal-2: #{$dark-charcoal-2};
+  --dark-charcoal-2-alt: #{$dark-charcoal-2-alt};
+  --white-2: #{$white-2};
+}

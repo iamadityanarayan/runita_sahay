@@ -1,0 +1,65 @@
+.header {
+  position: relative;
+  z-index: 10;
+  background-color: var(--white-2);
+  box-shadow: 0 2px 18px rgba(41, 50, 65, 0.06);
+}
+
+.header .navbar-brand {
+  margin-right: 2rem;
+}
+
+.header__logo {
+  color: var(--dark-charcoal-2);
+  font-family: 'PT Serif', serif;
+  font-size: 1.65rem;
+  font-weight: 700;
+  letter-spacing: 0.015em;
+}
+
+.header__logo:hover,
+.header__logo:focus {
+  color: var(--coral-2);
+}
+
+.header__nav {
+  align-items: center;
+  gap: clamp(0.35rem, 1.5vw, 1.4rem);
+}
+
+.header__nav .nav-link {
+  color: var(--dark-charcoal-2);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.header__nav .nav-link:hover,
+.header__nav .nav-link:focus {
+  color: var(--coral-2);
+}
+
+.header__schedule-button {
+  margin-left: 1.25rem;
+  padding: 0.8rem 1.15rem;
+  white-space: nowrap;
+}
+
+.header .navbar-toggler {
+  border-color: var(--dark-charcoal-2);
+}
+
+.header .navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem rgba(66, 99, 136, 0.2);
+}
+
+@media (max-width: 991.98px) {
+  .header__nav {
+    align-items: stretch;
+    gap: 0;
+    padding-top: 0.75rem;
+  }
+
+  .header__schedule-button {
+    margin: 0.5rem 0 0.25rem;
+  }
+}
